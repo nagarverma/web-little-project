@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<p>Please wait download will start in<span id="down"> 5 </span>  second</p>
+    <p><a href="flag.jpg">click here if download is not start</a></p>
+    <p><a href="flag.jpg" download="download" id="lnk">dowanload</a></p>--->
+    <button onclick="read()">read</button>
+    <button onclick="store()">store</button>
+    <script>
+function read(){
+    document.cookie="name=jitendra; max-age=10";
+
+}
+ function store(){
+    alert(document.cookie);
+}
+
+        //window.onload=function(){
+           // var count =5;
+        //    var stop= setInterval(timer,1000);
+
+          //  function timer ()
+          //  {
+           //     var span =document.getElementById("down");
+             //   span.innerHTML=count--;
+                //if(count<0)
+                //{
+                //    clearInterval(stop);
+                   // document.getElementById("lnk").click();//
+              //  window.location.assign("https://www.google.com")
+               // }
+           // }
+
+        //}//
+    </script>
+</body>
+</html>

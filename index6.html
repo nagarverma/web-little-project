@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="text" placeholder="f-name" id="f_name"><br><br>
+        <input type="text" name="text" placeholder="s-name" id="s_name"><br><br>
+        <input type="password" name="password" placeholder="P-name" id="pass"><br><br>
+        <button onclick="store()">sumbit</button>
+        <button onclick="read()">read</button>
+
+
+
+
+    </form>
+    <script>
+        function store(){
+            var s_name=document.getElementById("f_name");
+            var g_name=document.getElementById("s_name");
+            var pass =document.getElementById("pass")
+
+
+            document.cookie="username="+s_name.value+";max-age=3600";
+            document.cookie="secondName="+g_name.value+";max-age=3600";
+            document.cookie="password="+pass.value+";max-age=3600";
+
+            
+        }
+        function read(){
+                var all_cookoe=document.cookie.split(";");
+                var i;
+for(i=0;i,all_cookoe.length;i++)
+{
+    var data=all_cookoe[i].split("=");
+    document.write(data[1]+"<br>");
+}
+
+                
+
+            }
+
+    </script>
+</body>
+</html>

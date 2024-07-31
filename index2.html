@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="cookie_ value">
+    <button onclick="store()">store cookie</button>
+    <button onclick=read()>Read cookie</button>
+    <button onclick="del()">Delete</button>
+    
+    
+    <script>
+        window.onload= function(){
+            var c_input=document.getElementById("cookie_ value");
+            if(document.cookie=="")
+            {
+                c_input.value="";
+            }
+            else{
+                var  data =document.cookie.split("=");
+                c_input.value=data[1];
+            }
+        }
+
+        function store(){
+            
+            var cv=document.getElementById("cookie_ value").value;
+            document.cookie="name="+cv+"; expires=Thu, 30 june 2024 02:58:00 UTC";
+        }
+        function read(){
+            window.alert(document.cookie);
+        }
+        function del(){
+            document.getElementById("cookie_ value").value="";
+            var cv= document.getElementById("cookie_ value").value="";
+
+            document.cookie="name="+cv+"; expires=Thu, 30 june 2023 02:58:00 UTC";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <div id="webpage">
+        <h1>welcome to our webpage</h1>
+
+    </div>
+</center>
+<h1 id="net" style="color: red;">NO INTERNATE PLEASE CONNECT TO INTERNATE</h1>
+
+<script>
+
+    var a=document.getElementById("webpage");
+    var b=document.getElementById("net");
+    setInterval(demo,100);
+
+function demo(){
+
+    if(navigator.onLine==true)
+    {
+        a.style.display="block";
+        b.style.display="none";
+    }
+    else
+    {
+        a.style.display="none";
+        b.style.display="block";
+    
+    }
+    demo()
+
+
+}
+
+</script>
+    
+</body>
+</html>

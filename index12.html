@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        window.onload = function ()
+{
+
+    if( document.cookie.indexOf("user")!= -1)
+         {
+            var data =document.cookie.split("=");
+            alert("welcome back"+data[1]+"\n Register Date & Time"+date[2]);
+
+        }
+        else
+        {
+            var a= window.prompt("waht is your name?");
+            if(a=="" || a==null)
+            {
+                alert("enter your name");
+                location.reload();
+            }
+            else
+            {
+                var dt = new Date();
+                var d = dt.toLocaleDateString();
+                var t = dt.toLocaleTimeString();
+                
+                
+
+                document.cookie="user="+a+"="+d+" "+t+";max-age=3600";
+
+            }
+
+        }
+}
+        
+        
+    </Script>
+    
+</body>
+</html>

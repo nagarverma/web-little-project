@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h2>Login</h2>
+    <form>
+        <input type="text" name="text" placeholder="Enter Name" id="username"><br><br>
+        <input type="password" name="password" placeholder="password" id="password"><br><br>
+        <input type="checkbox" id="checkbox">Remember Me !<br><br>
+        <input type="submit">
+    </form>
+    <script>
+         var user=document.getElementById("username");
+         var pass=document.getElementById("password");
+         var check=document.getElementById("checkbox");
+
+
+         window.onload=function(){
+           if(document.cookie !=""){
+            var data=document.cookie.split("=");
+            user.value=data[1];
+            pass.value=data[2];
+             var rem=check.checked="checked";
+             if(rem=="checked")
+             {
+                check.onclick=function(){
+                document.cookie="data=;expires=Mon, 28 june 2005 12:00:00 UTC";
+
+             }
+             
+             }
+           }
+         
+         }
+
+         check.onclick=function(){
+            document.cookie="data="+user.value+"="+pass.value+";expires=Mon, 28 june 2024 12:00:00 UTC";
+         }
+
+    </script>
+    
+</body>
+</html>

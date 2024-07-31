@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="window.alert('Dont back other wise system BOM !')">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1 id="heading"> Owner :- Nagar(JITU)</h1>
+
+    <p id="pdd"></p>
+    <button onclick="stp()" style="width: 150px;height: 40px;border-radius: 10pc;background-color: #dedede;">check</button></center>
+    <button onclick="stp()" style="width: 150px;height: 40px;border-radius: 10pc;background-color: #dedede;">click</button></center>
+
+    <script>
+     document.onkeydown=function(a){
+        var c= a.keyCode;
+        var add =document.getElementById("pdd");
+        add.innerHTML=c;
+        add.style.textAlign="center";
+        add.style.fontSize="150px"
+        add.style.color="blue";
+        if(c==74)
+        {
+            add.innerHTML=c+"  Owner word character ";
+            add.style.fontSize="100px"
+
+            add.style.color="red";
+            
+        }
+        if(c==73){
+            add.innerHTML=c+"  Owner word character ";
+            add.style.fontSize="100px"
+
+            add.style.color="red";
+
+        }
+        if(c==84){
+            add.innerHTML=c+"  Owner word character ";
+            add.style.fontSize="100px"
+
+            add.style.color="red";
+
+        }
+            if(c==85){
+                add.innerHTML=c+"  Owner word character ";
+                add.style.fontSize="100px"
+
+            add.style.color="red";
+
+
+        }
+
+        
+        
+    return false;
+     }
+     
+        
+        
+
+
+      
+    </script>
+    
+</body>
+</html>

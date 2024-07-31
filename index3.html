@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="webpage">
+<input type="radio" name="bg" value="red" onclick=" demo(this)" id="red">RED
+<input type="radio" name="bg" value="blue" onclick="demo(this)" id="blue">BLUE
+<input type="radio" name="bg" value="green" onclick=" demo(this)" id="green">GREEN
+
+
+
+
+    <script>
+        window.onload= function(){
+            var color =document.cookie.split("=");
+            document.getElementById("webpage").style.backgroundColor=color[1];
+
+
+            var red =document.getElementById("red");
+            var blue =document.getElementById("blue");
+            var green =document.getElementById("green");
+            if(color[1]=="red")
+            {
+                red.checked=true;
+            }
+            else if( color[1]=="blue")
+            {
+                blue.checked=true;
+            }
+            else if (color[1]=="green")
+            {
+                green.checked=true;
+            }
+
+
+
+
+        }
+
+
+
+        function demo(element){
+            var color=element.value;
+            var webpage=document.getElementById("webpage");
+            webpage.style.backgroundColor=color;
+            document.cookie="name="+color+"; expires=Thu, 28 june 2024 12:00:00 UTC "
+
+
+        }
+
+
+    </script>
+</body>
+</html>

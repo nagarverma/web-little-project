@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 id="ppp">welcome my siecret page</h1>
+    <button id="bttn" style="width: 150px;height: 40px;border-radius: 10pc;background-color: #dedede;">click</button></center>
+    <script>
+        var button=document.getElementById("bttn");
+        button.onclick=function()
+        {
+            var result=document.getElementById("ppp");
+            result.innerHTML="jitendra kumar";
+            
+        }
+        document.onkeydown=function(a)
+        {
+            if(a.ctrlKey && a.keyCode==85){
+                alert("view page source not allowed");
+                return false;
+            }
+            else if(a.ctrlKey && a.shiftKey && a.keyCode==73){
+                alert("crtl+shift+ i not valid");
+                return false;
+            }
+            else if(a.ctrlKey &&   a.keyCode==67){
+                alert("crtl+C+ i not valid");
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>

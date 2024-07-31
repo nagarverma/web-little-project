@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="store()">store</button>
+    <button onclick="read()">read</button>
+    <button onclick="del()">delete</button>
+    <script>
+        function store(){
+            document.cookie="name=jitendra;max-age=3600";
+
+        }
+        function read(){
+            var a=window.prompt("enter your cookie name & value");
+            if(document.cookie.indexOf(a)!=-1)
+            {
+
+                alert("found")
+            }
+            else
+            {
+                alert("not found")
+            }
+        }
+        function del(){
+            document.cookie="name=jitendra;max-age=0";
+
+        }
+    </script>
+</body>
+</html>
